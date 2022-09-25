@@ -8,6 +8,7 @@
     "dev:css": "tailwindcss -w -i ./styles/app.css -o app/styles/app.css"
   },
   "dependencies": {
+    "@emotion/css": "^11.10.0",
     "@emotion/react": "^11.10.4",
     "@emotion/server": "^11.10.0",
     "@mantine/carousel": "^5.4.1",
