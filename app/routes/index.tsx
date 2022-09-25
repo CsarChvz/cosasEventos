@@ -27,12 +27,12 @@ export default function Index() {
           slideGap="lg"
           plugins={[autoplay.current]}
           align="start"
+          className="w-full max-w-7xl max-h-96"
           breakpoints={[
             { maxWidth: "md", slideSize: "90%" },
             { maxWidth: "sm", slideSize: "100%", slideGap: 0 },
             { maxWidth: "xs", slideSize: "100%", slideGap: 0 },
           ]}
-          className="w-full max-w-7xl max-h-96"
           styles={{
             indicator: {
               width: 12,
