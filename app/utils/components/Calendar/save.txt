@@ -1,0 +1,178 @@
+        {/* Modal para el formulario de Creacion */}
+        <div className="px-16">
+          <label htmlFor="my-modal-6" className="btn modal-button w-full">
+            open modal
+          </label>
+        </div>
+        <form>
+          <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+          <div className="modal modal-bottom sm:modal-middle">
+            <div className="modal-box">
+              <div className="font-bold text-xl text-center">
+                Crea un Evento
+              </div>
+              <div className="flex flex-col p-2">
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="Type here"
+                  className="input input-bordered input-secondary w-full max-w-full my-3"
+                />
+
+                <DatePicker
+                  locale="es"
+                  placeholder="Selecciona una fecha para el evento"
+                  label="Dia del evento"
+                  dropdownPosition="bottom-start"
+                  defaultValue={new Date()}
+                />
+                <input
+                  type="text"
+                  name="title"
+                  id="title"
+                  placeholder="Type here"
+                  className="input input-bordered input-primary w-full max-w-full my-3"
+                />
+                <button className="btn btn-primary w-full mt-3">Crear</button>
+              </div>
+            </div>
+          </div>
+        </form>
+
+
+
+               <Group position="center">
+          <div className="px-16">
+            <label
+              htmlFor="my-modal-6"
+              className="btn modal-button w-full"
+              onClick={() =>
+                openConfirmModal({
+                  centered: true,
+                  size: "md",
+                  title: (
+                    <p className="text-2xl font-bold text-center ">
+                      Crear un evento
+                    </p>
+                  ),
+                  closeOnConfirm: false,
+                  labels: {
+                    cancel: "Close modal",
+                    confirm: <Button className="btn">Siguiente</Button>,
+                  },
+                  children: (
+                    <>
+                      <form>
+                        <Input
+                          placeholder="Nombre del evento"
+                          data-autofocus
+                          size="lg"
+                          radius={"md"}
+                        />
+                        <ColorInput
+                          placeholder="Color para el evento"
+                          size="lg"
+                          radius={"md"}
+                        />
+                        <DatePicker
+                          locale="es-mx"
+                          placeholder="Dia del evento"
+                          label="Fecha del evento"
+                          size="lg"
+                          radius={"md"}
+                          defaultValue={new Date()}
+                        />
+                        <div className="container grid grid-cols-2 gap-2">
+                          <label className="btn btn-primary">Hola</label>
+                          <label className="btn btn-primary">Dos</label>
+                        </div>
+                      </form>
+                    </>
+                  ),
+                  onConfirm: () =>
+                    openConfirmModal({
+                      centered: true,
+                      title: "This is modal at second layer",
+                      labels: {
+                        confirm: <Button className="btn">Confirmar</Button>,
+                        cancel: "Back",
+                      },
+                      closeOnConfirm: false,
+                      children: (
+                        <form action="">
+                          <div className="form-control">
+                            <label className="label">
+                              <span className="label-text">Name</span>
+                            </label>
+                            <input
+                              type="text"
+                              placeholder="Enter your name"
+                              className="input input-bordered"
+                            />
+                          </div>
+                        </form>
+                      ),
+                      onConfirm: closeAllModals,
+                    }),
+                })
+              }
+            >
+              Agregar un Evento
+            </label>
+          </div>
+        </Group>
+
+
+
+                  <Form method="post">
+            <input type="checkbox" id="my-modal-6" className="modal-toggle" />
+            <div className="modal modal-bottom sm:modal-middle">
+              <div className="modal-box">
+                <div className="font-bold text-xl text-center">
+                  Crea un Evento
+                </div>
+                <div className="flex flex-col p-2">
+                  <p className="text-lg font-bold">Nombre del Evento</p>
+                  <Input
+                    type="text"
+                    name="title"
+                    id="title"
+                    size="lg"
+                    placeholder="Type here"
+                  />
+                  <p className="text-lg font-bold">Fecha del evento</p>
+                  <DatePicker
+                    size="lg"
+                    locale="es"
+                    id="date"
+                    name="date"
+                    placeholder="Selecciona una fecha para el evento"
+                    dropdownPosition="bottom-start"
+                    defaultValue={new Date()}
+                  />
+                  <p className="text-lg font-bold">Color</p>
+                  <Input
+                    type="text"
+                    size="lg"
+                    name="color"
+                    id="color"
+                    placeholder="Color"
+                  />
+                  <p className="text-lg font-bold">Personas dirigidas</p>
+                  <Input
+                    type="text"
+                    size="lg"
+                    name="addressedTo"
+                    id="addressedTo"
+                    placeholder="Type here"
+                  />
+                  <p className="text-lg font-bold">Descripcion</p>
+                  <Textarea size="lg" id="description" name="description" />
+                  <button className="btn btn-primary w-full mt-8" type="submit">
+                    Crear
+                  </button>
+                </div>
+              </div>
+            </div>
+          </Form>
