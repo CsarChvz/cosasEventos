@@ -20,9 +20,11 @@
     "@remix-run/vercel": "^1.7.2",
     "@vercel/node": "^2.4.4",
     "dayjs": "^1.11.5",
+    "embla-carousel-autoplay": "^7.0.3",
     "embla-carousel-react": "^7.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.4.0"
   },
   "devDependencies": {
     "@remix-run/dev": "^1.7.2",
