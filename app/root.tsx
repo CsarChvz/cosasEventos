@@ -11,6 +11,8 @@ import {
 import { MantineProvider, createEmotionCache } from "@mantine/core";
 import { StylesPlaceholder } from "@mantine/remix";
 import styles from "./styles/app.css";
+import { SideBarN } from "./utils/components/NavigationBar";
+
 import WrapperGlobal from "./context/WrapperGlobal";
 import { ModalsProvider } from "@mantine/modals";
 export const meta: MetaFunction = () => ({
@@ -25,15 +27,19 @@ export function links() {
   return [{ rel: "stylesheet", href: styles }];
 }
 
+createEmotionCache({ key: "mantine" });
 export default function App() {
   return (
     <WrapperGlobal>
       <Document>
-        <Outlet />
+        <SideBarN>
+          <Outlet />
+        </SideBarN>
       </Document>
     </WrapperGlobal>
   );
 }
+
 function Document({
   children,
   title,
